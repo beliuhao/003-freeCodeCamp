@@ -1,6 +1,6 @@
 
 function truncateString(str, num) {
-  var strLen = str.length;
+  let strLen = str.length;
   if(strLen > num) {
     if(num <= 3) {
       return str.slice(0, num).concat('...');

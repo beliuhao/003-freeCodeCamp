@@ -1,5 +1,5 @@
 function largestOfArray(arr) {
-  var maxVal = arr.reduce(function(preVal, nextVal) {
+  let maxVal = arr.reduce(function(preVal, nextVal) {
     return preVal >= nextVal ? preVal : nextVal;
   });
   return maxVal;
@@ -7,7 +7,7 @@ function largestOfArray(arr) {
 
 
 function largestOfFour(arr) {
-  var maxArray = arr.map(largestOfArray);
+  let maxArray = arr.map(largestOfArray);
   return maxArray;
 }
 

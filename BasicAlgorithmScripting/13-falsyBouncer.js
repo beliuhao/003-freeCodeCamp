@@ -1,6 +1,6 @@
-var falsyArray = [false, null, 0, "", undefined, NaN];
+let falsyArray = [false, null, 0, "", undefined, NaN];
 function bouncer(arr) {
-  var filteredArr = arr.filter(function(el) {
+  let filteredArr = arr.filter(function(el) {
     return !falsyArray.includes(el);
   });
   return filteredArr;

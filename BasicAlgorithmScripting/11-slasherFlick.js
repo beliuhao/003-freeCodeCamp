@@ -1,6 +1,6 @@
 
 function slasher(arr, howMany) {
-  var arrLen = arr.length;
+  let arrLen = arr.length;
   if(arr.length <= howMany) {
     return [];
   } else {

@@ -1,9 +1,9 @@
 function findLongestWord(str) {
-  var strToArray = str.split(' ');
-  var lengthOfEachWord = strToArray.map(function(word){
+  let strToArray = str.split(' ');
+  let lengthOfEachWord = strToArray.map(function(word){
     return word.length;
   });
-  var maxLength = lengthOfEachWord.reduce(function(previousVal, currentVal) {
+  let maxLength = lengthOfEachWord.reduce(function(previousVal, currentVal) {
     return previousVal >= currentVal ? previousVal : currentVal;
   });
   return maxLength;
@@ -11,12 +11,12 @@ function findLongestWord(str) {
 
 // Solution 2 :
 // function findLongestWord(str) {
-//   var strToArray = str.split(' ');
-//   var lengthOfEachWord = strToArray.map(function(word){
+//   let strToArray = str.split(' ');
+//   let lengthOfEachWord = strToArray.map(function(word){
 //     return word.length;
 //   });
-//   var maxLength = 0;
-//   for(var i = 0; i < lengthOfEachWord.length; i++) {
+//   let maxLength = 0;
+//   for(let i = 0; i < lengthOfEachWord.length; i++) {
 //     if(maxLength <= lengthOfEachWord[i]) {
 //       maxLength = lengthOfEachWord[i];
 //     }
