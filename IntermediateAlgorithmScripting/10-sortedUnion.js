@@ -4,13 +4,13 @@ function uniteUnique(arr) {
   for (let i = 0; i < arguments.length; i++) {
     arrArray.push(arguments[i]);
   }
-  let result = arrArray.reduce(function(pre, next) {
+  let result = arrArray.reduce(function(curr, next) {
     next.forEach(function(el) {
-      if(!pre.includes(el)) {
-        pre.push(el);
+      if(!curr.includes(el)) {
+        curr.push(el);
       }
     });
-    return pre;
+    return curr;
   }, []);
   return result;
 }

@@ -5,7 +5,7 @@ function booWho(bool) {
 
 booWho(null);
 
-// anothor solution:
+// another solution:
 // function booWho(bool) {
 //   return typeof bool === 'boolean';
 // }
