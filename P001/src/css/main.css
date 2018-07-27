@@ -1,0 +1,23 @@
+#main {
+  margin-top: 90px;
+  background-color: #F6F6F6;
+  color: #555;
+}
+
+@media(max-width: 501px) {
+  #main {
+    margin-top: 120px;
+  }
+}
+
+@media(max-width: 445px) {
+  #main {
+    margin-top: 150px;
+  }
+}
+
+@media(min-width: 985px) {
+  #main {
+    max-width: 720px;
+  }
+}
