@@ -1,32 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>FCC-P001-SurveyForm</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/css/main.css">
-  </head>
-  <body>
 
-    <header>
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src="./src/img/Herman.jpg" width="50" height="50" alt="">
-        </a>
-        <span class="navbar-text">
-            By a self-taught programmer & life-long learner, Herman.
-        </span>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>FCC-P001-SurveyForm</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+</head>
 
-    <section id="main" class="container">
-      <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
-      <h1 id="title" class="text-center display-4">Survey Form</h1>
-      <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
-      <p id="description" class="text-center">The second project I am going to finish on FCC.</p>
-      <!-- User Story #3: I can see a form with id="survey-form". -->
+<body>
 
-      <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+  <header>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="./src/img/Herman.jpg" width="50" height="50" alt="">
+      </a>
+      <span class="navbar-text">
+        By a self-taught programmer & life-long learner, Herman.
+      </span>
+    </nav>
+  </header>
+
+  <section id="main" class="container">
+    <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
+    <h1 id="title" class="text-center display-4">Survey Form</h1>
+    <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+    <p id="description" class="text-center">The second project I am going to finish on FCC.</p>
+    <!-- User Story #3: I can see a form with id="survey-form". -->
+
+    <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
       User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
       User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
       User Story #7: Inside the form, I can enter a number in a field with id="number".
@@ -40,171 +42,174 @@
       User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
       User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
 
-      <form action="#" id="survey-form">
+    <form action="#" id="survey-form">
 
-        <div class="form-group row">
-          <label id="name-label" for="name" class="col-sm-6 col-form-label control-label align-right">Name</label>
+      <div class="form-group row">
+        <label id="name-label" for="name" class="col-sm-6 col-form-label control-label align-right">Name</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label id="email-label" for="email" class="col-sm-6 col-form-label control-label align-right">Email</label>
+        <div class="col-sm-6">
+          <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your Email">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label id="number-label" for="number" class="col-sm-6 col-form-label control-label align-right">Age</label>
+        <div class="col-sm-6">
+          <input type="number" class="form-control" id="number" name="age" required placeholder="Age" min="1" max="120">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="dropdown" class="col-sm-6 col-form-label align-right">Which option best describes your current role?</label>
+        <div class="col-sm-6">
+          <select class="form-control" id="dropdown" name="currentRole">
+            <option value="" disabled selected>Choose your current role</option>
+            <option value="student">Student</option>
+            <option value="fullTimeJob">Full Time Job</option>
+            <option value="freelancer">Freelancer</option>
+            <option value="preferNotToSay">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-6 pt-0 align-right control-label">Would you like to enter the IT industry ?</legend>
           <div class="col-sm-6">
-            <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox1" value="definitely" checked>
+              <label class="form-check-label" for="gridCheckbox1">
+                Definitely
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox2" value="maybe">
+              <label class="form-check-label" for="gridCheckbox2">
+                Maybe
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox3" value="notSure">
+              <label class="form-check-label" for="gridCheckbox3">
+                Not sure
+              </label>
+            </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label id="email-label" for="email" class="col-sm-6 col-form-label control-label align-right">Email</label>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-6 pt-0 align-right control-label">What is your desired salary range in IT industry ?</legend>
           <div class="col-sm-6">
-            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your Email">
+            <label for="minSalary">Min Salary</label>
+            <input type="range" class="custom-range" min="5" max="15" step="1" id="minSalary" name="minSalary">
+            <label for="maxSalary">Max Salary</label>
+            <input type="range" class="custom-range" min="15" max="25" step="1" id="maxSalary" name="maxSalary">
           </div>
         </div>
-        <div class="form-group row">
-          <label id="number-label" for="number" class="col-sm-6 col-form-label control-label align-right">Age</label>
+      </fieldset>
+
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label align-right">Salary Range</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="rangeLeft" name="rangeLeft" placeholder="Min">
+        </div>
+        <div class="col-form-label">
+          <span class="spanSpace">k</span>
+          <span>~</span>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="rangeRight" name="rangeRight" placeholder="Max">
+        </div>
+        <div class="col-form-label">
+          <span>k</span>
+        </div>
+      </div>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-6 pt-0 align-right control-label">What do you want to do in IT industry ?</legend>
           <div class="col-sm-6">
-            <input type="number" class="form-control" id="number" name="age" required placeholder="Age" min="1" max="120">
-          </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="dropdown" class="col-sm-6 col-form-label align-right">Which option best describes your current role?</label>
-            <div class="col-sm-6">
-                <select class="form-control" id="dropdown" name="currentRole">
-                  <option value="" disabled selected>Choose your current role</option>
-                  <option value="student">Student</option>
-                  <option value="fullTimeJob">Full Time Job</option>
-                  <option value="freelancer">Freelancer</option>
-                  <option value="preferNotToSay">Prefer not to say</option>
-                  <option value="other">Other</option>
-                </select>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox1" value="frontEndDeveloper">
+              <label class="form-check-label" for="gridCheckbox1">
+                Front-end Developer
+              </label>
             </div>
-        </div>
-
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-6 pt-0 align-right control-label">Would you like to enter the IT industry ?</legend>
-            <div class="col-sm-6">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox1" value="definitely" checked>
-                <label class="form-check-label" for="gridCheckbox1">
-                  Definitely
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox2" value="maybe">
-                <label class="form-check-label" for="gridCheckbox2">
-                  Maybe
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="likeornot" id="gridCheckbox3" value="notSure">
-                <label class="form-check-label" for="gridCheckbox3">
-                  Not sure
-                </label>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox2" value="backEndDeveloper">
+              <label class="form-check-label" for="gridCheckbox2">
+                Back-end Developer
+              </label>
             </div>
-          </div>
-        </fieldset>
-
-        <fieldset class="form-group">
-            <div class="row">
-              <legend class="col-form-label col-sm-6 pt-0 align-right control-label">What is your desired salary range in IT industry ?</legend>
-              <div class="col-sm-6">
-                <label for="minSalary">Min Salary</label>
-                <input type="range" class="custom-range" min="5" max="15" step="1" id="minSalary" name="minSalary">
-                <label for="maxSalary">Max Salary</label>
-                <input type="range" class="custom-range" min="15" max="25" step="1" id="maxSalary" name="maxSalary">
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="fullStackDeveloper">
+              <label class="form-check-label" for="gridCheckbox3">
+                Full-stack Developer
+              </label>
             </div>
-        </fieldset>
-
-        <div class="form-group row">
-            <label class="col-sm-6 col-form-label align-right">Salary Range</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="rangeLeft" name="rangeLeft" placeholder="Min">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="databaseEngineer">
+              <label class="form-check-label" for="gridCheckbox3">
+                Database Engineer
+              </label>
             </div>
-            <div class="col-form-label">
-                <span class="spanSpace">k</span><span>~</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="uiDesigner">
+              <label class="form-check-label" for="gridCheckbox3">
+                UI Designer
+              </label>
             </div>
-            <div class="col-sm-2">
-                <input type="text" class="form-control" id="rangeRight" name="rangeRight" placeholder="Max">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="uxDesigner">
+              <label class="form-check-label" for="gridCheckbox3">
+                UX Designer
+              </label>
             </div>
-            <div class="col-form-label">
-                <span>k</span>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="productManager">
+              <label class="form-check-label" for="gridCheckbox3">
+                Product Manager
+              </label>
             </div>
-        </div>
-
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-6 pt-0 align-right control-label">What do you want to do in IT industry ?</legend>
-            <div class="col-sm-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox1" value="frontEndDeveloper">
-                <label class="form-check-label" for="gridCheckbox1">
-                  Front-end Developer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox2" value="backEndDeveloper">
-                <label class="form-check-label" for="gridCheckbox2">
-                  Back-end Developer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="fullStackDeveloper">
-                <label class="form-check-label" for="gridCheckbox3">
-                  Full-stack Developer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="databaseEngineer">
-                <label class="form-check-label" for="gridCheckbox3">
-                  Database Engineer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="uiDesigner">
-                <label class="form-check-label" for="gridCheckbox3">
-                  UI Designer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="uxDesigner">
-                <label class="form-check-label" for="gridCheckbox3">
-                  UX Designer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="productManager">
-                <label class="form-check-label" for="gridCheckbox3">
-                  Product Manager
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="freeToChoose">
-                <label class="form-check-label" for="gridCheckbox3">
-                  Free to Choose
-                </label>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="whatToDo" id="gridCheckbox3" value="freeToChoose">
+              <label class="form-check-label" for="gridCheckbox3">
+                Free to Choose
+              </label>
             </div>
           </div>
-        </fieldset>
-
-        <div class="form-group row">
-          <label for="textarea" class="col-sm-6 col-form-label align-right">Any Comments or Suggestions ?</label>
-          <div class="col-sm-6">
-            <textarea class="form-control" id="textarea" rows="3" name="comment" placeholder="Enter your comment here..."></textarea>
-          </div>
         </div>
+      </fieldset>
 
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group row">
+        <label for="textarea" class="col-sm-6 col-form-label align-right">Any Comments or Suggestions ?</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="textarea" rows="3" name="comment" placeholder="Enter your comment here..."></textarea>
         </div>
+      </div>
 
-      </form>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
 
-      <footer  class="text-center">
-          <p>Copyright by <a rel="nofollow" href="https://www.freecodecamp.com/beliuhao" target="_blank">Herman</a></p>
-      </footer>
-    </section>
+    </form>
 
-    <script src="./node_modules/jquery/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./src/js/app.js"></script>
-  </body>
+    <footer class="text-center">
+      <p>Copyright by
+        <a rel="nofollow" href="https://www.freecodecamp.com/beliuhao" target="_blank">Herman</a>
+      </p>
+    </footer>
+  </section>
+
+  <script src="./node_modules/jquery/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./src/js/app.js"></script>
+</body>
 </html

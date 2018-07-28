@@ -1,12 +1,12 @@
 #main {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   color: #555;
 }
 
 /* star mark for required input */
 .control-label:after {
-  content:"*";
-  color:red;
+  content: "*";
+  color: red;
 }
 
 .spanSpace {
@@ -17,13 +17,13 @@ footer {
   padding-top: 10px;
 }
 
-@media(min-width: 985px) {
+@media (min-width: 985px) {
   #main {
     max-width: 720px;
   }
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   .align-right {
     text-align: right;
   }
@@ -34,10 +34,8 @@ footer {
   margin-bottom: 35px;
 }
 
-@media(min-width: 455px) {
+@media (min-width: 455px) {
   #main {
     margin-top: 120px;
   }
 }
-
-
