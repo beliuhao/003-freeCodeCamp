@@ -27,6 +27,19 @@
   margin-top: 80px;
 }
 
+.customizedbtn {
+  z-index: -1;
+  display: block;
+  width: 250px;
+  margin: 5px;
+}
+
+ul#table li{
+  list-style-type: disc !important;
+  list-style-position: inside;
+  padding: 5px;
+}
+
 .sidenav li {
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 }

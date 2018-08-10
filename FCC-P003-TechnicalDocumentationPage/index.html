@@ -65,14 +65,286 @@
   <div id="main">
     <div id="installation" class="scrollspy">
       <h5 class="center-align">Installation</h5>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum unde qui ullam, dolor odit pariatur repudiandae mollitia
-        libero. Earum odit quisquam illo aspernatur perspiciatis modi. Ipsam eligendi qui a adipisci placeat repellat labore,
-        non nobis repellendus quod, est incidunt rerum aliquam consectetur quas sequi sint quo exercitationem? Eum perspiciatis
-        architecto labore nostrum illo dolorum, in, voluptate inventore aspernatur corporis enim nemo sit, illum laudantium
-        non error itaque eveniet nulla facilis. Iste eaque sint voluptatem neque blanditiis vitae ratione sequi nam iusto
-        voluptatibus qui quas obcaecati, minima at aliquid quisquam deserunt doloribus! Aliquid ab cumque velit soluta molestias
-        aliquam ullam maiores.</p>
+      <div class="section">
+        <h6>Vue Devtools</h6>
+        <div class="divider"></div>
+        <p>When using Vue, we recommend also installing the
+          <span>
+            <a href="https://github.com/vuejs/vue-devtools#vue-devtools">Vue Devtools</a>
+          </span> in your browser, allowing you to inspect and debug your Vue applications in a more user-friendly interface.</p>
+      </div>
+
+      <div class="section">
+        <h6>Direct &lt;script&gt; Include</h6>
+        <div class="divider"></div>
+        <p>Simply download and include with a script tag. Vue will be registered as a global variable.</p>
+        <blockquote>
+          <p>Don’t use the minified version during development. You will miss out on all the nice warnings for common mistakes!</p>
+        </blockquote>
+        <a href="https://vuejs.org/js/vue.js" class="waves-effect waves-light btn-small customizedbtn">
+          <i class="material-icons right">cloud_download</i>Development Version</a>
+        <p>With full warnings and debug mode</p>
+        <a href="https://vuejs.org/js/vue.min.js" class="waves-effect waves-light btn-small customizedbtn">
+          <i class="material-icons right">cloud_download</i>Production Version</a>
+        <p>Warnings stripped, 30.90KB min+gzip</p>
+        <p>#CDN</p>
+        <p>We recommend linking to a specific version number that you can update manually:</p>
+        <blockquote>
+          <code>
+            &lt;script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"&gt;&lt;/script&gt;
+          </code>
+        </blockquote>
+        <p>You can browse the source of the NPM package at cdn.jsdelivr.net/npm/vue.</p>
+        <p>Vue is also available on unpkg and cdnjs (cdnjs takes some time to sync so the latest release may not be available
+          yet).
+        </p>
+        <p>Make sure to read about the different builds of Vue and use the production version in your published site, replacing
+          vue.js with vue.min.js. This is a smaller build optimized for speed instead of development experience.</p>
+      </div>
+
+      <div class="section">
+        <h6>NPM</h6>
+        <div class="divider"></div>
+        <p>NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with
+          module bundlers such as Webpack or Browserify. Vue also provides accompanying tools for authoring Single File Components.</p>
+        <blockquote>
+          <code>
+            <p># latest stable</p>
+            <p>$ npm install vue</p>
+          </code>
+        </blockquote>
+      </div>
+
+      <div class="section">
+        <h6>CLI</h6>
+        <div class="divider"></div>
+        <p>Vue provides an official CLI for quickly scaffolding ambitious Single Page Applications. It provides batteries-included
+          build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload,
+          lint-on-save, and production-ready builds. See the Vue CLI docs for more details.</p>
+        <blockquote>
+          <p>The CLI assumes prior knowledge of Node.js and the associated build tools. If you are new to Vue or front-end build
+            tools, we strongly suggest going through the guide without any build tools before using the CLI.</p>
+        </blockquote>
+      </div>
+
+      <div class="section">
+        <h6>Explanation of Different Builds</h6>
+        <div class="divider"></div>
+        <p>In the dist/ directory of the NPM package you will find many different builds of Vue.js. Here’s an overview of the
+          difference between them:</p>
+        <table class="highlight responsive-table striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>UMD</th>
+              <th>CommonJS</th>
+              <th>ES Module</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>Full</th>
+              <td>vue.js</td>
+              <td>vue.common.js</td>
+              <td>vue.esm.js</td>
+            </tr>
+            <tr>
+              <th>Runtime-only</th>
+              <td>vue.runtime.js</td>
+              <td>vue.runtime.common.js</td>
+              <td>vue.runtime.esm.js</td>
+            </tr>
+            <tr>
+              <th>Full (production)</th>
+              <td>vue.min.js</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th>Runtime-only (production)</th>
+              <td>vue.runtime.min.js</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>#Terms</p>
+        <ul id="table">
+          <li>
+            <b>Full</b>: builds that contain both the compiler and the runtime.
+          </li>
+          <li>
+            <b>Compiler</b>: code that is responsible for compiling template strings into JavaScript render functions.
+          </li>
+          <li>
+            <b>Runtime</b>: code that is responsible for creating Vue instances, rendering and patching virtual DOM, etc. Basically
+            everything minus the compiler.
+          </li>
+          <li>
+            <b>UMD</b>: UMD builds can be used directly in the browser via a &lt;script&gt; tag. The default file from jsDelivr
+            CDN at https://cdn.jsdelivr.net/npm/vue is the Runtime + Compiler UMD build (vue.js).
+          </li>
+          <li>
+            <b>CommonJS</b>: CommonJS builds are intended for use with older bundlers like browserify or webpack 1. The default
+            file for these bundlers (pkg.main) is the Runtime only CommonJS build (vue.runtime.common.js).
+          </li>
+          <li>
+            <b>ES module</b>: ES module builds are intended for use with modern bundlers like webpack 2 or rollup. The default
+            file for these bundlers (pkg.module) is the Runtime only ES Module build (vue.runtime.esm.js).
+          </li>
+        </ul>
+
+        <p>#Runtime + Compiler vs. Runtime-only</p>
+        <p>If you need to compile templates on the client (e.g. passing a string to the template option, or mounting to an element
+          using its in-DOM HTML as the template), you will need the compiler and thus the full build:</p>
+        <blockquote>
+          <code>
+            <pre>
+// this requires the compiler
+new Vue({
+  template: '&lt;div&gt;{{ hi }}&lt;/div&gt;'
+})
+
+// this does not
+new Vue({
+  render (h) {
+    return h('div', this.hi)
+  }
+})
+            </pre>
+          </code>
+        </blockquote>
+        <p>When using vue-loader or vueify, templates inside *.vue files are pre-compiled into JavaScript at build time. You
+          don’t really need the compiler in the final bundle, and can therefore use the runtime-only build.</p>
+        <p>Since the runtime-only builds are roughly 30% lighter-weight than their full-build counterparts, you should use it
+          whenever you can. If you still wish to use the full build instead, you need to configure an alias in your bundler:</p>
+
+        <p>Webpack</p>
+        <blockquote>
+          <code>
+          <pre>
+module.exports = {
+  // ...
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+    }
+  }
+}
+          </pre>
+        </code>
+        </blockquote>
+
+        <p>Rollup</p>
+        <blockquote>
+          <code>
+          <pre>
+const alias = require('rollup-plugin-alias')
+
+rollup({
+  // ...
+  plugins: [
+    alias({
+      'vue': 'vue/dist/vue.esm.js'
+    })
+  ]
+})
+          </pre>
+        </code>
+        </blockquote>
+
+        <p>Browserify</p>
+        <p>Add to your project’s package.json:</p>
+        <blockquote>
+          <code>
+          <pre>
+{
+  // ...
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  }
+}
+          </pre>
+        </code>
+        </blockquote>
+
+        <p>Parcel</p>
+        <p>Add to your project’s package.json:</p>
+        <blockquote>
+          <code>
+          <pre>
+{
+  // ...
+  "alias": {
+    "vue" : "./node_modules/vue/dist/vue.common.js"
+  }
+}
+          </pre>
+        </code>
+        </blockquote>
+
+        <p>#Development vs. Production Mode</p>
+        <p>Development/production modes are hard-coded for the UMD builds: the un-minified files are for development, and the
+          minified files are for production.</p>
+        <p>CommonJS and ES Module builds are intended for bundlers, therefore we don’t provide minified versions for them. You
+          will be responsible for minifying the final bundle yourself.</p>
+        <p>CommonJS and ES Module builds also preserve raw checks for process.env.NODE_ENV to determine the mode they should
+          run in. You should use appropriate bundler configurations to replace these environment variables in order to control
+          which mode Vue will run in. Replacing process.env.NODE_ENV with string literals also allows minifiers like UglifyJS
+          to completely drop the development-only code blocks, reducing final file size.</p>
+
+        <p>#CSP environments</p>
+        <p>Some environments, such as Google Chrome Apps, enforce Content Security Policy (CSP), which prohibits the use of
+          new Function() for evaluating expressions. The full build depends on this feature to compile templates, so is unusable
+          in these environments.</p>
+        <p>On the other hand, the runtime-only build is fully CSP-compliant. When using the runtime-only build with Webpack
+          + vue-loader or Browserify + vueify, your templates will be precompiled into render functions which work perfectly
+          in CSP environments.</p>
+      </div>
+
+      <div class="section">
+        <h6>Dev Build</h6>
+        <div class="divider"></div>
+        <p>
+          <b>Important</b>: the built files in GitHub’s /dist folder are only checked-in during releases. To use Vue from the
+          latest source code on GitHub, you will have to build it yourself!</p>
+        <blockquote>
+          <code>
+            <pre>
+git clone https://github.com/vuejs/vue.git node_modules/vue
+cd node_modules/vue
+npm install
+npm run build
+            </pre>
+            </code>
+        </blockquote>
+      </div>
+
+      <div class="section">
+          <h6>Bower</h6>
+          <div class="divider"></div>
+          <p>
+              Only UMD builds are available from Bower.</p>
+          <blockquote>
+            <code>
+              <pre>
+# latest stable
+$ bower install vue
+              </pre>
+
+              </code>
+          </blockquote>
+        </div>
+
+        <div class="section">
+            <h6>AMD Module Loaders</h6>
+            <div class="divider"></div>
+            <p>All UMD builds can be used directly as an AMD module.</p>
+          </div>
     </div>
+
     <div id="introduction" class="scrollspy">
       <h5 class="center-align">Introduction</h5>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum unde qui ullam, dolor odit pariatur repudiandae mollitia
@@ -250,9 +522,9 @@
   </div>
 
   <div class="fixed-action-btn">
-      <a href="#installation" class="btn-floating btn-large red">
-        <i class="large material-icons">publish</i>
-      </a>
+    <a href="#installation" class="btn-floating btn-large red">
+      <i class="large material-icons">publish</i>
+    </a>
   </div>
 
   <!--JavaScript at end of body for optimized loading-->
@@ -272,11 +544,11 @@
     });
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth',
-              // block: "start"
-          });
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: "start"
+        });
       });
     });
   </script>
