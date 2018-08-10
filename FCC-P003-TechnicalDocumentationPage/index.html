@@ -250,7 +250,7 @@
   </div>
 
   <div class="fixed-action-btn">
-      <a href="#header" class="btn-floating btn-large red">
+      <a href="#installation" class="btn-floating btn-large red">
         <i class="large material-icons">publish</i>
       </a>
   </div>
@@ -268,6 +268,15 @@
       var instances = M.ScrollSpy.init(elems, {
         activeClass: "active",
         scrollOffset: 75
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth',
+              // block: "start"
+          });
       });
     });
   </script>
