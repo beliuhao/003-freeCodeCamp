@@ -1,9 +1,20 @@
-header, main, footer {
-  padding-left: 300px;
+#menu {
+  padding: 20px;
 }
 
+#header, #main, #footer {
+  margin-left: 300px;
+  padding: 0 20px;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+}
+
+
 @media only screen and (max-width : 992px) {
-  header, main, footer {
-    padding-left: 0;
+  #header, #main, #footer {
+    margin-left: 60px;
   }
 }
