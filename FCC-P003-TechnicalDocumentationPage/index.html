@@ -14,9 +14,24 @@
 </head>
 <body>
 
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <div class="divider"></div>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+
 
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, {});
+    });
+  </script>
+
 </body>
 </html>
