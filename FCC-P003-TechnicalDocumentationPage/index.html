@@ -199,7 +199,7 @@
         repellat.</p>
     </div>
     <div id="template" class="scrollspy">
-      <h5>Installation</h5>
+      <h5>Template Syntax</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
         est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
         Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -266,7 +266,7 @@
         repellat.</p>
     </div>
     <div id="computedProps" class="scrollspy">
-      <h5>Installation</h5>
+      <h5>Computed Properties and Watchers</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
         est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
         Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -334,7 +334,7 @@
       </p>
     </div>
     <div id="bindings" class="scrollspy">
-      <h5>Installation</h5>
+      <h5>Class and Style Bindings</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
         est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
         Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -402,7 +402,7 @@
       </p>
     </div>
     <div id="conditionalRendering" class="scrollspy">
-      <h5>Installation</h5>
+      <h5>Conditional Rendering</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
         est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
         Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -470,7 +470,7 @@
       </p>
     </div>
     <div id="listRendering" class="scrollspy">
-      <h5>Installation</h5>
+      <h5>List Rendering</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
         est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
         Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -538,7 +538,7 @@
       </p>
     </div>
     <div id="eventHandling" class="scrollspy">
-        <h5>Installation</h5>
+        <h5>Event Handling</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
           est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
           Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -606,7 +606,7 @@
         </p>
     </div>
     <div id="formInputBindings" class="scrollspy">
-        <h5>Installation</h5>
+        <h5>Form Input Bindings</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
           est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
           Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -674,7 +674,7 @@
         </p>
     </div>
     <div id="componentsBasics" class="scrollspy">
-        <h5>Installation</h5>
+        <h5>Components Basics</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur neque, reprehenderit veritatis architecto dolorem
           est, enim nulla nam eum consequatur consectetur recusandae error eos ipsam, suscipit ea rem voluptatum id inventore eligendi?
           Iure earum consequatur necessitatibus nulla dolor numquam placeat ea, nobis nostrum doloremque beatae molestias a nesciunt
@@ -758,8 +758,11 @@
       var instances = M.Sidenav.init(elems, {});
     });
     document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.scrollspy');
-    var instances = M.ScrollSpy.init(elems, {activeClass: "active"});
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems, {
+        activeClass: "active",
+        scrollOffset: 75
+      });
     });
   </script>
 
