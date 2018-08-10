@@ -31,6 +31,12 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 }
 
+.sidenav li a.active,
+.sidenav li a:hover {
+  background-color:rgba(128, 0, 128, 0.5);
+  border-left: 3px solid rgb(0, 195, 255);
+}
+
 
 @media only screen and (max-width : 992px) {
   #header, #main, #footer {
