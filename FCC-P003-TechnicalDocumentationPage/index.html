@@ -768,29 +768,7 @@ $ bower install vue
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems, {});
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.scrollspy');
-      var instances = M.ScrollSpy.init(elems, {
-        activeClass: "active",
-        scrollOffset: 75
-      });
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth',
-          block: "start"
-        });
-      });
-    });
-  </script>
+  <script src="src/js/app.js"></script>
 
 </body>
 
