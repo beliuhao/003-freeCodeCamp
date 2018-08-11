@@ -48,7 +48,8 @@ const updateImgSrc = function() {
 $(document).ready(function() {
   updateImgSrc();
   randomQuote();
-  setInterval(updateImgSrc, 10000);
+  setInterval(updateImgSrc, 6000);
+  setInterval(randomQuote, 8000);
   $("#new-quote").click(function() {
     randomQuote();
   })
