@@ -27,6 +27,10 @@
   margin-top: 80px;
 }
 
+.page-footer {
+  background-color: rgb(168, 168, 168) !important;
+}
+
 .customizedbtn {
   z-index: -1;
   display: block;
