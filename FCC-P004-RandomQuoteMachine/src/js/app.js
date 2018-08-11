@@ -34,7 +34,24 @@ const randomQuote = function() {
 };
 
 const getRandomKeyword = function() {
-  let keywordsArr = ["world", "nature", "mountain", "water", "sea", "flower", "tree", "animal", "people"];
+  let keywordsArr = [
+    "world",
+    "nature",
+    "mountain",
+    "water",
+    "sea",
+    "flower",
+    "tree",
+    "animal",
+    "people",
+    "food",
+    "body",
+    "toys",
+    "entertainment",
+    "computer",
+    "apple",
+    "beauty"
+  ];
   let len = keywordsArr.length;
   let index = randomNumInRange(0, len - 1);
   return keywordsArr[index];
