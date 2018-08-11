@@ -1,0 +1,16 @@
+#quote-box {
+  position: absolute;
+  top: 10%;
+}
+
+.btn-floating i {
+  font-size: 30px
+}
+
+.card-content #text {
+  font-size: 45px
+}
+
+.card-content #author {
+  text-align: right;
+}
