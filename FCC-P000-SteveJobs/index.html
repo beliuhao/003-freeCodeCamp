@@ -1,155 +1,201 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>FCC-P000-SteveJobs</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/css/main.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src="./src/img/Herman.jpg" width="50" height="50" alt="">
-        </a>
-        <span class="navbar-text">
-            By a self-taught programmer & life-long learner, Herman.
-        </span>
-      </nav>
-    </header>
-    <!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
-    <div id="main" class="container">
-      <!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
-      <h1 id="title" class="text-primary text-center">Steve Jobs</h1>
-      <p class="text-center">[ 24 February 1955 – 5 October 2011 ]</p>
-      <!-- User Story #3: I should see a div element with a corresponding id="img-div". -->
-      <div id="img-div" class="text-center">
-        <img src="https://www.diygenius.com/wp-content/uploads/2015/06/steve-jobs-his-best-advice-759x500.jpg" id="image" class="img-thumbnail" alt="Photo of Jobs">
-        <!-- User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. -->
-        <p id="img-caption" class="caption text-center">A man considered to have been a leading figure in both the computer and entertainment industries.</p>
-      </div>
-      <!-- User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page.
+
+<head>
+  <meta charset="utf-8">
+  <title>FCC-P000-SteveJobs</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="./src/img/liuhao.png" width="50" height="50" alt="liuhao">
+      </a>
+      <span class="navbar-text">
+        By a self-taught programmer & life-long learner, Herman.
+      </span>
+    </nav>
+  </header>
+  <!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
+  <div id="main" class="container">
+    <!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
+    <h1 id="title" class="text-center">Steve Jobs</h1>
+    <p class="text-center">[ 24 February 1955 – 5 October 2011 ]</p>
+    <!-- User Story #3: I should see a div element with a corresponding id="img-div". -->
+    <div id="img-div" class="text-center">
+      <img src="https://www.diygenius.com/wp-content/uploads/2015/06/steve-jobs-his-best-advice-759x500.jpg" id="image" class="img-thumbnail"
+        alt="Photo of Jobs">
+      <!-- User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. -->
+      <p id="img-caption" class="caption text-center">A man considered to have been a leading figure in both the computer
+        and entertainment industries.</p>
+    </div>
+    <!-- User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page.
       User Story #7: I should see an a element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab (i.e. target="_blank").
       User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. -->
-      <div id="tribute-info" class="timeLine">
-        <p style="font-size:20px"><strong>Here is a time line of some great quotes of Steve:</strong></p>
-        <hr>
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Quotes in 1980s
-                </button>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <h5>1980s</h5>
-                <ul>
-                  <li>We're gambling on our vision, and we would rather do that than make "me too" products. Let some other companies do that. For us, it's always the next dream.</li>
-                  <li>If, for some reason, we make some big mistake and IBM wins, my personal feeling is that we are going to enter a computer Dark Ages for about twenty years.</li>
-                  <li>Do you want to spend the rest of your life selling sugared water or do you want a chance to change the world?</li>
-                  <li>It's more fun to be a pirate than to join the Navy.</li>
-                  <li>You can't just ask customers what they want and then try to give that to them. By the time you get it built, they'll want something new.</li>
-                </ul>
-              </div>
-            </div>
+    <div id="tribute-info" class="timeLine">
+      <p style="font-size:20px"><strong>Here is a time line of some great quotes of Steve:</strong></p>
+      <hr>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Quotes in 1980s
+              </button>
+            </h5>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Quotes in 1990s
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <h5>1990s</h5>
-                <ul>
-                  <li>What a computer is to me is it's the most remarkable tool that we have ever come up with. It's the equivalent of a bicycle for our minds.</li>
-                  <li>Being the richest man in the cemetery doesn't matter to me … Going to bed at night saying we've done something wonderful... that's what matters to me.</li>
-                  <li>I'm convinced that about half of what separates the successful entrepreneurs from the non-successful ones is pure perseverance. It is so hard.</li>
-                  <li>Unless you have a lot of passion about this, you're not going to survive. You're going to give it up. So you've got to have an idea, or a problem or a wrong that you want to right that you're passionate about otherwise you're not going to have the perseverance to stick it through. I think that's half the battle right there.</li>
-                  <li>When you're young, you look at television and think, There's a conspiracy. The networks have conspired to dumb us down. </li>
-                  <li>Nobody has tried to swallow us since I've been here. I think they are afraid how we would taste.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Quotes in 2000-04
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                <h5>2000-04</h5>
-                <ul>
-                  <li>I would trade all of my technology for an afternoon with <a href="https://en.wikiquote.org/wiki/Socrates" target="_blank">Socrates</a>.</li>
-                  <li>We used to dream about this stuff. Now we get to build it. It's pretty great.</li>
-                  <li>We think basically you watch television to turn your brain off, and you work on your computer when you want to turn your brain on.</li>
-                  <li>The system is that there is no system. That doesn't mean we don't have process. Apple is a very disciplined company, and we have great processes. But that's not what it's about.</li>
-                  <li>We're always thinking about new markets we could enter, but it's only by saying no that you can concentrate on the things that are really important.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFour">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Quotes in 2005-09
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body">
-                <h5>2005-09</h5>
-                <ul>
-                  <li>I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what's next.</li>
-                  <li>I make 50 cents for showing up … and the other 50 cents is based on my performance.</li>
-                  <li>I wish developing great products was as easy as writing a check. If that was the case, Microsoft would have great products.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFive">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Speech in 2005
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-              <div class="card-body">
-                <h5>Address at Stanford University (2005)</h5>
-                <ul>
-                  <li>Again, you can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road will give you the confidence to follow your heart even when it leads you off the well-worn path and that will make all the difference.</li>
-                  <li>I didn't see it then, but it turned out that <strong>getting fired from Apple was the best thing that could have ever happened to me.</strong> </li>
-                  <li>Sometimes life hits you in the head with a brick. Don’t lose faith. I’m convinced that the only thing that kept me going was that I loved what I did. <strong>You’ve got to find what you love</strong>. And that is as true for your work as it is for your lovers. Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets better and better as the years roll on. So keep looking. Don’t settle.</li>
-                  <li> <strong>I have looked in the mirror every morning and asked myself: "If today were the last day of my life, would I want to do what I am about to do today?" And whenever the answer has been "No" for too many days in a row, I know I need to change something.</strong></li>
-                  <li>Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything — all external expectations, all pride, all fear of embarrassment or failure — these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. <strong>There is no reason not to follow your heart.</strong></li>
-                  <li><strong>Your time is limited, so don't waste it living someone else's life.</strong> Don't be trapped by dogma — which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.</li>
-                  <li>Stay Hungry. Stay Foolish.</li>
-                </ul>
-              </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <h5>1980s</h5>
+              <ul>
+                <li>We're gambling on our vision, and we would rather do that than make "me too" products. Let some other
+                  companies do that. For us, it's always the next dream.</li>
+                <li>If, for some reason, we make some big mistake and IBM wins, my personal feeling is that we are going
+                  to enter a computer Dark Ages for about twenty years.</li>
+                <li>Do you want to spend the rest of your life selling sugared water or do you want a chance to change the
+                  world?</li>
+                <li>It's more fun to be a pirate than to join the Navy.</li>
+                <li>You can't just ask customers what they want and then try to give that to them. By the time you get it
+                  built, they'll want something new.</li>
+              </ul>
             </div>
           </div>
         </div>
-        <p id="more"><strong>If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Wikipedia</a> entry.</strong></p>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                Quotes in 1990s
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <h5>1990s</h5>
+              <ul>
+                <li>What a computer is to me is it's the most remarkable tool that we have ever come up with. It's the equivalent
+                  of a bicycle for our minds.</li>
+                <li>Being the richest man in the cemetery doesn't matter to me … Going to bed at night saying we've done
+                  something wonderful... that's what matters to me.</li>
+                <li>I'm convinced that about half of what separates the successful entrepreneurs from the non-successful
+                  ones is pure perseverance. It is so hard.</li>
+                <li>Unless you have a lot of passion about this, you're not going to survive. You're going to give it up.
+                  So you've got to have an idea, or a problem or a wrong that you want to right that you're passionate about
+                  otherwise you're not going to have the perseverance to stick it through. I think that's half the battle
+                  right there.</li>
+                <li>When you're young, you look at television and think, There's a conspiracy. The networks have conspired
+                  to dumb us down. </li>
+                <li>Nobody has tried to swallow us since I've been here. I think they are afraid how we would taste.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
+                Quotes in 2000-04
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <h5>2000-04</h5>
+              <ul>
+                <li>I would trade all of my technology for an afternoon with <a href="https://en.wikiquote.org/wiki/Socrates"
+                    target="_blank">Socrates</a>.</li>
+                <li>We used to dream about this stuff. Now we get to build it. It's pretty great.</li>
+                <li>We think basically you watch television to turn your brain off, and you work on your computer when you
+                  want to turn your brain on.</li>
+                <li>The system is that there is no system. That doesn't mean we don't have process. Apple is a very disciplined
+                  company, and we have great processes. But that's not what it's about.</li>
+                <li>We're always thinking about new markets we could enter, but it's only by saying no that you can concentrate
+                  on the things that are really important.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                aria-controls="collapseFour">
+                Quotes in 2005-09
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              <h5>2005-09</h5>
+              <ul>
+                <li>I think if you do something and it turns out pretty good, then you should go do something else wonderful,
+                  not dwell on it for too long. Just figure out what's next.</li>
+                <li>I make 50 cents for showing up … and the other 50 cents is based on my performance.</li>
+                <li>I wish developing great products was as easy as writing a check. If that was the case, Microsoft would
+                  have great products.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                aria-controls="collapseFive">
+                Speech in 2005
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              <h5>Address at Stanford University (2005)</h5>
+              <ul>
+                <li>Again, you can't connect the dots looking forward; you can only connect them looking backwards. So you
+                  have to trust that the dots will somehow connect in your future. You have to trust in something — your
+                  gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road will give
+                  you the confidence to follow your heart even when it leads you off the well-worn path and that will make
+                  all the difference.</li>
+                <li>I didn't see it then, but it turned out that <strong>getting fired from Apple was the best thing that
+                    could have ever happened to me.</strong> </li>
+                <li>Sometimes life hits you in the head with a brick. Don’t lose faith. I’m convinced that the only thing
+                  that kept me going was that I loved what I did. <strong>You’ve got to find what you love</strong>. And
+                  that is as true for your work as it is for your lovers. Your work is going to fill a large part of your
+                  life, and the only way to be truly satisfied is to do what you believe is great work. And the only way
+                  to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with
+                  all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets
+                  better and better as the years roll on. So keep looking. Don’t settle.</li>
+                <li> <strong>I have looked in the mirror every morning and asked myself: "If today were the last day of my
+                    life, would I want to do what I am about to do today?" And whenever the answer has been "No" for too
+                    many days in a row, I know I need to change something.</strong></li>
+                <li>Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the
+                  big choices in life. Because almost everything — all external expectations, all pride, all fear of embarrassment
+                  or failure — these things just fall away in the face of death, leaving only what is truly important. Remembering
+                  that you are going to die is the best way I know to avoid the trap of thinking you have something to lose.
+                  You are already naked. <strong>There is no reason not to follow your heart.</strong></li>
+                <li><strong>Your time is limited, so don't waste it living someone else's life.</strong> Don't be trapped
+                  by dogma — which is living with the results of other people's thinking. Don't let the noise of others'
+                  opinions drown out your own inner voice. And most important, have the courage to follow your heart and
+                  intuition. They somehow already know what you truly want to become. Everything else is secondary.</li>
+                <li>Stay Hungry. Stay Foolish.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <footer  class="text-center">
-        <p>Organized and coded by <a rel="nofollow" href="https://www.freecodecamp.com/beliuhao" target="_blank">Herman</a></p>
-      </footer>
+      <p id="more"><strong>If you have time, you should read more about this incredible human being on his <a id="tribute-link"
+            href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Wikipedia</a> entry.</strong></p>
     </div>
+    <footer class="text-center">
+      <p>Organized and coded by <a rel="nofollow" href="https://www.freecodecamp.com/beliuhao" target="_blank">Herman</a></p>
+    </footer>
+  </div>
 
-    <script src="./node_modules/jquery/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
+  <script src="./node_modules/jquery/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
 </html
