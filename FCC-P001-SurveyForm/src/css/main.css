@@ -1,4 +1,4 @@
-#main {
+section#main {
   background-color: #f6f6f6;
   color: #555;
 }
@@ -13,12 +13,17 @@
   padding-right: 20px;
 }
 
+section#main {
+  padding: 10px;
+  margin: 80px auto 10px auto;
+}
+
 footer {
   padding-top: 10px;
 }
 
 @media (min-width: 985px) {
-  #main {
+  section#main {
     max-width: 720px;
   }
 }
@@ -29,9 +34,10 @@ footer {
   }
 }
 
-#main {
-  margin-top: 150px;
-  margin-bottom: 35px;
+@media (max-width: 525px) {
+  span.navbar-text {
+    display: none;
+  }
 }
 
 @media (min-width: 455px) {
