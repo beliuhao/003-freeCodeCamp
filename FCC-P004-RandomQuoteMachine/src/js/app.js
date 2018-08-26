@@ -30,7 +30,7 @@ const randomQuote = function() {
         $("#author").html(quoteAuthor);
       }
     }
-  })
+  });
 };
 
 const getRandomKeyword = function() {
@@ -55,12 +55,12 @@ const getRandomKeyword = function() {
   let len = keywordsArr.length;
   let index = randomNumInRange(0, len - 1);
   return keywordsArr[index];
-}
+};
 
 const updateImgSrc = function() {
   let url = "https://source.unsplash.com/800x400/?" + getRandomKeyword();
-  $("#image").attr("src",url);
-}
+  $("#image").attr("src", url);
+};
 
 $(document).ready(function() {
   updateImgSrc();
@@ -69,5 +69,5 @@ $(document).ready(function() {
   setInterval(randomQuote, 8000);
   $("#new-quote").click(function() {
     randomQuote();
-  })
+  });
 });
